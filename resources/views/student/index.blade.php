@@ -33,40 +33,43 @@
                         <h1>Student Manager</h1>
                     </strong>
                 </header>
-                <form action="{{route('student.create')}} " method="post">
-                    <table class="table-auto">
-                        <thead class="table-dark">
-                        <tr>
-                            <th class="border w-1/2 px-4 py-2">Student ID</th>
-                            <th class="border w-1/2 px-4 py-2">First Name</th>
-                            <th class="border w-1/2 px-4 py-2">Last Name</th>
-                            <th class="border w-1/2 px-4 py-2">Course</th>
-                            <th class="border w-1/2 px-4 py-2">Operations</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach($student as $stud)
-                            <tr >
-                                <td class="border px-4 py-2">{{ $stud->student_id }}</td>
-                                <td class="border px-4 py-2">{{ $stud->firstName }}</td>
-                                <td class="border px-4 py-2">{{ $stud->lastName }}</td>
-                                <td class="border px-4 py-2">{{ $stud->course }}</td>
-                                <td class="border px-4 py-2">
-                                    <form action="{{route('student.destroy', $stud->id)}}" method="post">
-
-                                        <a href="{{ route('student.edit', $stud->id) }}" class="btn btn-sm btn-primary">Edit</a><br>
-                                        <a href="{{ route('student.show', $stud->id) }}" class="btn btn-sm btn-info">Show</a><br>
-
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-                                    </form>
-                                </td>
+                <div class="w-full p-4">
+                    <form action="{{route('student.create')}} " method="post">
+                        <table class="table-auto">
+                            <thead class="table-dark">
+                            <tr>
+                                <th class="border px-4 py-2">Student ID</th>
+                                <th class="border px-4 py-2">First Name</th>
+                                <th class="border px-4 py-2">Last Name</th>
+                                <th class="border px-4 py-2">Course</th>
+                                <th class="border px-4py-2">Operations</th>
                             </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
-                </form>
+                            </thead>
+                            <tbody>
+                            @foreach($student as $stud)
+                                <tr >
+                                    <td class="border px-4 py-2">{{ $stud->student_id }}</td>
+                                    <td class="border px-4 py-2">{{ $stud->firstName }}</td>
+                                    <td class="border px-4 py-2">{{ $stud->lastName }}</td>
+                                    <td class="border px-4 py-2">{{ $stud->course }}</td>
+                                    <td class="border px-4 py-2">
+                                        <form action="{{route('student.destroy', $stud->id)}}" method="post">
+
+                                            <a href="{{ route('student.edit', $stud->id) }}" class="btn btn-sm btn-primary">Edit</a><br>
+                                            <a href="{{ route('student.show', $stud->id) }}" class="btn btn-sm btn-info">Show</a><br>
+
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+
                 <div class="w-full p-6">
 
                     <p class="text-gray-700">

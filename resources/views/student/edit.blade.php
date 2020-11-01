@@ -12,7 +12,6 @@
           crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 </head>
-
 @section('content')
     <main class="sm:container sm:mx-auto sm:mt-10">
         <div class="w-full sm:px-6">
@@ -41,41 +40,39 @@
                 </header>
                 <div class="w-full p-2">
                     <strong>
-                        <h1>Enter the Details to add new Student:</h1>
+                        <h1>Update Student Details:</h1>
                     </strong>
                 </div>
-                <div class="w-full p-6">
-                    <form action="{{ route('student.store') }}" method="post">
-                        @csrf
-                        <div class="form-group">
-                            <strong>
-                                <label>Student ID:</label>
-                            </strong>
-                            <input name="student_id" type="text" class="form-control"  placeholder="Enter Student ID">
-                        </div>
-                        <div class="form-group">
-                            <strong>
-                                <label>First Name:</label>
-                            </strong>
-                            <input name="firstName" type="text" class="form-control"  placeholder="Enter the first name">
-                        </div>
-                        <div class="form-group">
-                            <strong>
-                                <label>Last Name:</label>
-                            </strong>
-                            <input name="lastName" type="text" class="form-control"  placeholder="Enter last name">
-                        </div>
+                <form action="{{ route('student.store', $student->id) }}" method="post" class="w-full p-2">
+                    @csrf
+                    <div class="form-group">
+                        <strong>
+                            <label>Student ID:</label>
+                        </strong>
+                        <input name="student_id" type="text" class="form-control" value="{{$student->student_id}}" placeholder="Enter Student ID">
+                    </div>
+                    <div class="form-group">
+                        <strong>
+                            <label>First Name:</label>
+                        </strong>
+                        <input name="firstName" type="text" class="form-control" value="{{$student->firstName}}"  placeholder="Enter the first name">
+                    </div>
+                    <div class="form-group">
+                        <strong>
+                            <label>Last Name:</label>
+                        </strong>
+                        <input name="lastName" type="text" class="form-control" value="{{$student->lastName}}"  placeholder="Enter last name">
+                    </div>
 
-                        <div class="form-group">
-                            <strong>
-                                <label>Course:</label>
-                            </strong>
-                            <input name="course" type="text" class="form-control"  placeholder="Enter Course name">
-                        </div>
-                        <input type="submit" class="btn btn-info" value="Save">
-                        <input type="reset" class="btn btn-warning" value="Reset">
-                    </form>
-                </div>
+                    <div class="form-group">
+                        <strong>
+                            <label>Course:</label>
+                        </strong>
+                        <input name="course" type="text" class="form-control" value="{{$student->course}}"  placeholder="Enter Course name">
+                    </div>
+                    <input type="submit" class="btn btn-info" value="Save">
+                    <input type="reset" class="btn btn-warning" value="Reset">
+                </form>
 
                 <div class="w-full p-6">
 
