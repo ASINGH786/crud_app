@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +29,8 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        $student = Student::all();
+        return view('student.create', compact('student'));
     }
 
     /**
@@ -57,7 +62,7 @@ class StudentController extends Controller
      */
     public function show(Student $student)
     {
-        //
+        return view('student.show', compact('student'));
     }
 
     /**
@@ -68,7 +73,7 @@ class StudentController extends Controller
      */
     public function edit(Student $student)
     {
-        //
+        return view('student.edit', compact('student'));
     }
 
     /**
@@ -80,7 +85,17 @@ class StudentController extends Controller
      */
     public function update(Request $request, Student $student)
     {
-        //
+        $request->validate([
+            'student_id' => 'required',
+            'firstName' => 'required',
+            'lastName' => 'required',
+            'course' => 'required',
+        ]);
+
+        $student->update($request->all());
+
+        return redirect()->route('student.index')
+            ->with('success','Student updated successfully.');
     }
 
     /**
@@ -91,6 +106,8 @@ class StudentController extends Controller
      */
     public function destroy(Student $student)
     {
-        //
+        $student->delete();
+        return redirect()->route('student.index')
+            ->with('success', 'Student has been removed from database successfuly');
     }
 }
