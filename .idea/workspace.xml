@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable path="C:\xampp\php\php.exe" />
+    </execution>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="C:/xampp/php" />
+    </include_path>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
+  </component>
+</project>
