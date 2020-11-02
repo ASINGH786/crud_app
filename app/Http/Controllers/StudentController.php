@@ -86,7 +86,7 @@ class StudentController extends Controller
     public function update(Request $request, Student $student)
     {
         $request->validate([
-            'student_id' => 'required|max:8',
+            'student_id' => 'required',
             'firstName' => 'required',
             'lastName' => 'required',
             'course' => 'required',
@@ -108,6 +108,6 @@ class StudentController extends Controller
     {
         $student->delete();
         return redirect()->route('student.index')
-            ->with('success', 'Student has been removed from database successfuly');
+            ->with('success', 'Student has been removed from database successfully');
     }
 }

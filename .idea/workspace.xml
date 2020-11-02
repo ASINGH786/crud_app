@@ -4,17 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86347c18-74b4-4808-999a-258dc4e4dae1" name="Default Changelist" comment="" />
+    <list default="true" id="86347c18-74b4-4808-999a-258dc4e4dae1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/student/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/student/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/student/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/index.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable path="C:\xampp\php\php.exe" />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
@@ -169,6 +178,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604260958242</updated>
       <workItem from="1604260959445" duration="15026000" />
+      <workItem from="1604276959431" duration="11642000" />
     </task>
     <servers />
   </component>
@@ -176,9 +186,13 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604274900822">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604319928120">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604274900822" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604319928120" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604315911560">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604315911560" />
   </component>
 </project>

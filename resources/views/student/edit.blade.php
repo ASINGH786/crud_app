@@ -43,8 +43,9 @@
                         <h1>Update Student Details:</h1>
                     </strong>
                 </div>
-                <form action="{{ route('student.store', $student->id) }}" method="post" class="w-full p-2">
+                <form action="{{ route('student.update', $student->id) }}" method="post" class="w-full p-2">
                     @csrf
+                    @method('PUT')
                     <div class="form-group">
                         <strong>
                             <label>Student ID:</label>
@@ -70,8 +71,8 @@
                         </strong>
                         <input name="course" type="text" class="form-control" value="{{$student->course}}"  placeholder="Enter Course name">
                     </div>
-                    <input type="submit" class="btn btn-info" value="Save">
-                    <input type="reset" class="btn btn-warning" value="Reset">
+                    <button type="submit" class="btn btn-primary" >Update</button>
+                    <button type="reset" class="btn btn-warning" >Reset</button>
                 </form>
 
                 <div class="w-full p-6">

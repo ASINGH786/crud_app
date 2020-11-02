@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 <html lang="en">
 <head>
@@ -34,7 +35,7 @@
                     </strong>
                 </header>
                 <div class="w-full p-4">
-                    <form action="{{route('student.create')}} " method="post">
+                    <form action="{{url('/create/')}} " method="post">
                         <table class="table-auto">
                             <thead class="table-dark">
                             <tr>
@@ -42,7 +43,7 @@
                                 <th class="border px-4 py-2">First Name</th>
                                 <th class="border px-4 py-2">Last Name</th>
                                 <th class="border px-4 py-2">Course</th>
-                                <th class="border px-4py-2">Operations</th>
+                                <th class="border px-4py-2">Actions</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -55,8 +56,8 @@
                                     <td class="border px-4 py-2">
                                         <form action="{{route('student.destroy', $stud->id)}}" method="post">
 
-                                            <a href="{{ route('student.edit', $stud->id) }}" class="btn btn-sm btn-primary">Edit</a><br>
-                                            <a href="{{ route('student.show', $stud->id) }}" class="btn btn-sm btn-info">Show</a><br>
+                                            <a href="{{ route('student.edit', $stud->id) }}" class="btn btn-sm btn-primary">Edit</a> <br>
+                                            <a href="{{ route('student.show', $stud->id) }}" class="btn btn-sm btn-info">Show</a> <br>
 
                                             @csrf
                                             @method('DELETE')
@@ -68,16 +69,14 @@
                         </table>
                     </form>
                 </div>
-
+            </section>
                 <div class="w-full p-6">
 
                     <p class="text-gray-700">
                         <a class="btn btn-primary" href="{{ route('student.create') }}" >
                             <i class="fas fa-backward "></i>>>Add New Student<<</a>
                     </p>
-
                 </div>
-            </section>
         </div>
     </main>
 @endsection

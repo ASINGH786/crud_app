@@ -77,6 +77,8 @@
                     </form>
                 </div>
 
+
+            </section>
                 <div class="w-full p-6">
 
                     <p class="text-gray-700">
@@ -85,7 +87,6 @@
                     </p>
 
                 </div>
-            </section>
         </div>
     </main>
 @endsection
